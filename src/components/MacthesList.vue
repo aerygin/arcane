@@ -37,7 +37,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </b-col>
   </b-row>
@@ -85,11 +84,8 @@
                     }
                     result[sport.id].tournaments = tmpTournaments
                 })
-
                 this.sortBySport(result);
                 this.sortByTournamentAndPosition();
-
-
             },
 
             sortBySport(obj) {
@@ -109,7 +105,6 @@
                             return c.position - d.position
                         })
                     })
-
                     this.result[i].tournaments = tempTournaments
                 }
             }
@@ -119,56 +114,3 @@
         }
     }
 </script>
-
-<style>
-
-    .match-header {
-        font-size: 20px;
-        margin: 10px 0;
-    }
-
-    .match-item {
-        display: flex;
-        border: 1px solid #ced4da;
-        padding: 15px;
-        border-radius: 5px;
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .add-btn {
-        padding: 10px 20px;
-    }
-
-    .button-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-
-    .vs {
-        font-weight: 600;
-    }
-
-    #match-name {
-        width: 250px;
-    }
-
-    .table {
-        display: table;
-        margin-bottom: 0 !important;
-    }
-
-    .tr {
-        display: table-row;
-    }
-
-    .td {
-        display: table-cell;
-        width: 100px;
-    }
-
-    .td:nth-child(n+2) {
-        text-align: center;
-    }
-
-</style>

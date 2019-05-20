@@ -1,2 +1,79 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap-vue/src/index.scss';
+
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 100px;
+  margin: 0 10px
+}
+
+.inpt-grp {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 899px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+.match-header {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.match-item {
+  display: flex;
+  border: 1px solid #ced4da;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  width: auto;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.vs {
+  font-weight: 600;
+}
+
+#match-name {
+  width: 250px;
+}
+
+.table {
+  display: table;
+  margin-bottom: 0 !important;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+  width: 100px;
+}
+
+.td:nth-child(n+2) {
+  text-align: center;
+}

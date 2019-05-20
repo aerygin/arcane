@@ -1,7 +1,6 @@
 <template>
     <div class="form-wrapper">
         <b-form v-on:submit.prevent="submit()">
-
             <b-form-group class="inpt-grp" label="Sport:" label-for="input-1">
                 <b-form-select
                         @change="onSportSelect()"
@@ -17,7 +16,6 @@
                     </option>
                 </b-form-select>
             </b-form-group>
-
             <b-form-group v-if="sportSelected" class="inpt-grp" label="Tournament:" label-for="input-2">
                 <b-form-select
                         @change="onTournamentSelect()"
@@ -45,8 +43,6 @@
                     </option>
                 </b-form-select>
             </b-form-group>
-
-
             <b-form-group v-if="tournamentSelected" class="inpt-grp" label="Competitor 1:" label-for="competitor-1">
                 <b-form-input
                         id="competitor-1"
@@ -69,7 +65,7 @@
                 <b-button type="submit" variant="primary">Submit</b-button>
                 <b-button type="button" variant="danger" @click="$emit('cancel')">Cancel</b-button>
             </div>
-    </b-form>
+        </b-form>
   </div>
 </template>
 
@@ -130,6 +126,7 @@
 
             },
         },
+
         beforeMount() {
             sports.sort((a, b) => {
                 return a.position - b.position
@@ -138,30 +135,3 @@
   }
 </script>
 
-<style scoped>
-    .buttons-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-
-    button {
-        width: 100px;
-        margin: 0 10px
-    }
-
-    .inpt-grp {
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    .form-wrapper {
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    @media (max-width: 899px) {
-        .form-wrapper {
-            width: 100%;
-        }
-    }
-</style>
