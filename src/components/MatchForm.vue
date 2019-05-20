@@ -66,7 +66,7 @@
                 <b-button type="button" variant="danger" @click="$emit('cancel')">Cancel</b-button>
             </div>
         </b-form>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -77,24 +77,24 @@
         props: {
             result: Array
         },
-    data () {
-      return {
-        form: {
-            id: '',
-            name: '',
-          competitorOneName: '',
-          competitorTwoName: '',
-          tournament: {},
-          position: 0
+        data () {
+          return {
+            form: {
+                id: '',
+                name: '',
+              competitorOneName: '',
+              competitorTwoName: '',
+              tournament: {},
+              position: 0
+            },
+              sportSelected: false,
+              tournamentSelected: false,
+              availableTournaments: [],
+              tournaments,
+              sports,
+              positions: [0, 1, 2, 3, 4, 5]
+          }
         },
-          sportSelected: false,
-          tournamentSelected: false,
-          availableTournaments: [],
-          tournaments,
-          sports,
-          positions: [0, 1, 2, 3, 4, 5]
-      }
-    },
         methods: {
             onSportSelect() {
                 this.sportSelected = true;

@@ -1,7 +1,5 @@
 import tournaments from './tournaments'
 import competitors from './competitors'
-import sports from './sports'
-
 
 let matches = []
 let competitorsIndex = 0
@@ -23,28 +21,6 @@ tournaments.forEach((tournament) => {
     competitorsIndex += 2
   })
 })
-
-
-
-// Now `result` looks like this:
-/*{
-    "1": {
-    id: "sport-id",
-        name: "sport-name",
-        tournaments: [
-        {
-            id: "tournament-id",
-            name: "tournament-name",
-            matches: [
-                {
-                    id: "match-id",
-                    name: "match-name",
-                }
-            ]
-        }
-    ]
-}*/
-
 
 export default matches
 
